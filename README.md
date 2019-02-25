@@ -3,9 +3,7 @@ Location module
 
 Provides location information on where a Mac is physical located.
 
-This module relies on `pinpoint` an external project located here: https://github.com/clburlison/pinpoint
-
-Author: Clayton Burlison - https://clburlison.com  
+This module relies on `pinpoint` an external project located here: https://github.com/jelockwood/pinpoint
 
 #Database entries
 
