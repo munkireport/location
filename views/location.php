@@ -14,8 +14,8 @@
 
 </div>  <!-- /container -->
 
-<?php if(conf('google_maps_api_key')):?>
-<script src="https://maps.googleapis.com/maps/api/js?key=<?=conf('google_maps_api_key')?>"></script>
+<?php if(env('GOOGLE_MAPS_API_KEY')):?>
+<script src="https://maps.googleapis.com/maps/api/js?key=<?=env('GOOGLE_MAPS_API_KEY')?>"></script>
 <?php else:?>
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 <?php endif?>
