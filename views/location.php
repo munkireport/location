@@ -14,7 +14,7 @@
 
 </div>  <!-- /container -->
 
-<?php if(env('GOOGLE_MAPS_API_KEY')):?>
+<?php if(env('GOOGLE_MAPS_API_KEY')):?> <?php // Quick fix, should use the conf() system ?>
 <script src="https://maps.googleapis.com/maps/api/js?key=<?=env('GOOGLE_MAPS_API_KEY')?>"></script>
 <?php else:?>
 <script src="https://maps.googleapis.com/maps/api/js"></script>
