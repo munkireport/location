@@ -1,3 +1,4 @@
+
 <?php $this->view('partials/head'); ?>
 
 <div class="container">
@@ -50,7 +51,7 @@
 
         $('.table th').map(function(){
 
-            columnDefs.push({name: $(this).data('colname'), targets: col});
+            columnDefs.push({name: $(this).data('colname'), targets: col, render: $.fn.dataTable.render.text()});
 
             if($(this).data('sort')){
               mySort.push([col, $(this).data('sort')])
@@ -92,9 +93,9 @@
             columnDefs: columnDefs,
 		    createdRow: function( nRow, aData, iDataIndex ) {
 	        	// Update name in first column to link
-	        	var name=$('td:eq(0)', nRow).html();
+	        	var name=$('td:eq(0)', nRow).text();
 	        	if(name == ''){name = "No Name"};
-	        	var sn=$('td:eq(1)', nRow).html();
+	        	var sn=$('td:eq(1)', nRow).text();
                 var link = mr.getClientDetailLink(name, sn, '#tab_location-tab');
 	        	$('td:eq(0)', nRow).html(link);
                 
