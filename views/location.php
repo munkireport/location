@@ -19,11 +19,10 @@
 <?php else:?>
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 <?php endif?>
-<script src="<?php echo conf('subdirectory'); ?>assets/js/googlemaps/markerclusterer.js"></script>
+<script src="<?php echo rtrim(url(), '/'); ?>/module/location/js/markerclusterer"></script>
 <script src="<?php echo conf('subdirectory'); ?>assets/js/munkireport.autoupdate.js"></script>
 
 <script>
-
 
 var mapObj = {};
 
