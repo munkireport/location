@@ -5,7 +5,7 @@ Provides location information on where a Mac is physical located.
 
 This module relies on `pinpoint` an external project located here: https://github.com/jelockwood/pinpoint
 
-Note: To avoid seeing the Development Map you need to enable Maps JavaScript API for your project in the Google Cloud Platform Console.
+Note: To avoid seeing the Development Map you need to enable Maps JavaScript API for your project in the Google Cloud Platform Console and add it as `GOOGLE_MAPS_API_KEY` in the MunkiReport's `.env` configuration file.
 
 #Database entries
 
