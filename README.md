@@ -21,5 +21,5 @@ The following data is collected and can be accessed via MunkiReport's API:
 * LastRun - Str, Last run time stored in UTC time
 * LastLocationRun - Str, Last time a location run was done successfully
 * CurrentStatus - Str, Friendly message describing last run
-* LS_Enabled - Bool, are Location Services enabled
+* LS_Enabled - Int, are Location Services enabled
 * StaleLocation - Str, Yes/No to indicate if the lookup location is from an old run
