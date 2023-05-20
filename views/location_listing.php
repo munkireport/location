@@ -1,14 +1,9 @@
-
 <?php $this->view('partials/head'); ?>
 
-<div class="container">
-
-  <div class="row">
-
+<div class="container-fluid">
+  <div class="row pt-4">
     <div class="col-lg-12">
-
-      <h3><span data-i18n="location.report"></span> <span id="total-count" class='label label-primary'>…</span></h3>
-      
+      <h3><span data-i18n="location.report"></span> <span id="total-count" class='badge badge-primary'>…</span></h3>
       <table class="table table-striped table-condensed table-bordered">
         <thead>
           <tr>
@@ -64,7 +59,7 @@
             col++
         });
 
-	    oTable = $('.table').dataTable( {
+        oTable = $('.table').dataTable( {
             ajax: {
                 url: appUrl + '/datatables/data',
                 type: "POST",
@@ -80,18 +75,13 @@
                         });
 
                     }
-        		    // IDK what this does
-                    if(d.search.value.match(/^\d+\.\d+(\.(\d+)?)?$/)){
-                        var search = d.search.value.split('.').map(function(x){return ('0'+x).slice(-2)}).join('');
-                        d.search.value = search;
-                    }                    
                 }
             },
             dom: mr.dt.buttonDom,
             buttons: mr.dt.buttons,
             order: mySort,
             columnDefs: columnDefs,
-		    createdRow: function( nRow, aData, iDataIndex ) {
+            createdRow: function( nRow, aData, iDataIndex ) {
 	        	// Update name in first column to link
 	        	var name=$('td:eq(0)', nRow).text();
 	        	if(name == ''){name = "No Name"};

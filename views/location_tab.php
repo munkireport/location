@@ -1,53 +1,51 @@
+<h2 data-i18n="location.location"></h2>
+<div id="location-msg" data-i18n="listing.loading" class="col-lg-12 text-center"></div>
 
-	<h2 data-i18n="location.location"></h2>
-
-	<div id="location-msg" data-i18n="listing.loading" class="col-lg-12 text-center"></div>
-
-	<div id="location-view" class="row hide">
-		<div class="col-md-6">
-			<table class="table table-striped">
-				<tr>
-					<th data-i18n="location.currentstatus"></th>
-					<td id="location-currentstatus"></td>
-				</tr>
-				<tr>
-					<th data-i18n="location.stalelocation"></th>
-					<td id="location-stalelocation"></td>
-				</tr>
-				<tr>
-					<th data-i18n="location.address"></th>
-					<td id="location-address"></td>
-				</tr>
-				<tr>
-					<th data-i18n="location.coordinates"></th>
-					<td id="location-coordinates"></td>
-				</tr>
-				<tr>
-					<th data-i18n="location.altitude"></th>
-					<td id="location-altitude"></td>
-				</tr>
-				<tr>
-					<th data-i18n="location.lastrun"></th>
-					<td id="location-lastrun"></td>
-				</tr>
-				<tr>
-					<th data-i18n="location.lastlocationrun"></th>
-					<td id="location-lastlocationrun"></td>
-				</tr>
-				<tr>
-					<th data-i18n="location.latitudeaccuracy"></th>
-					<td id="location-latitudeaccuracy"></td>
-				</tr>
-				<tr>
-					<th data-i18n="location.longitudeaccuracy"></th>
-					<td id="location-longitudeaccuracy"></td>
-				</tr>
-			</table>
-		</div>
-		<div class="col-md-6">
-			<div style="height: 512px" id="map-canvas"></div>
-		</div>
+<div id="location-view" class="row hide">
+	<div class="col-md-6">
+		<table class="table table-striped">
+			<tr>
+				<th data-i18n="location.currentstatus"></th>
+				<td id="location-currentstatus"></td>
+			</tr>
+			<tr>
+				<th data-i18n="location.stalelocation"></th>
+				<td id="location-stalelocation"></td>
+			</tr>
+			<tr>
+				<th data-i18n="location.address"></th>
+				<td id="location-address"></td>
+			</tr>
+			<tr>
+				<th data-i18n="location.coordinates"></th>
+				<td id="location-coordinates"></td>
+			</tr>
+			<tr>
+				<th data-i18n="location.altitude"></th>
+				<td id="location-altitude"></td>
+			</tr>
+			<tr>
+				<th data-i18n="location.lastrun"></th>
+				<td id="location-lastrun"></td>
+			</tr>
+			<tr>
+				<th data-i18n="location.lastlocationrun"></th>
+				<td id="location-lastlocationrun"></td>
+			</tr>
+			<tr>
+				<th data-i18n="location.latitudeaccuracy"></th>
+				<td id="location-latitudeaccuracy"></td>
+			</tr>
+			<tr>
+				<th data-i18n="location.longitudeaccuracy"></th>
+				<td id="location-longitudeaccuracy"></td>
+			</tr>
+		</table>
 	</div>
+	<div class="col-md-6">
+		<div style="height: 512px" id="map-canvas"></div>
+	</div>
+</div>
 
 <?php if(env('GOOGLE_MAPS_API_KEY')):?> <?php // Quick fix, should use the conf() system ?>
 <script src="https://maps.googleapis.com/maps/api/js?key=<?=env('GOOGLE_MAPS_API_KEY')?>"></script>
@@ -126,9 +124,7 @@ $(document).on('appReady', function(e, lang) {
 			myLocation.setMap(map);
 
 		}
-
 	});
-
 });
 
 </script>

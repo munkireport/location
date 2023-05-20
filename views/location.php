@@ -1,17 +1,13 @@
 <?php $this->view('partials/head', array(
-	"scripts" => array(
-		"clients/client_list.js"
-	)
+    "scripts" => array(
+        "clients/client_list.js"
+    )
 )); ?>
 
-<div class="container">
-
-  <div class="row" style="height: calc(100vh - 136px);">
-
+<div class="container-fluid">
+  <div class="row pt-4" style="height: calc(100vh - 136px);">
     <div class="col-md-12" id="map" style="height:100%"></div>
-
   </div>
-
 </div>  <!-- /container -->
 
 <?php if(env('GOOGLE_MAPS_API_KEY')):?> <?php // Quick fix, should use the conf() system ?>
