@@ -73,8 +73,7 @@ mapObj.showMarkers = function() {
         var latLng = new google.maps.LatLng(mapObj.machines[i].latitude,
             mapObj.machines[i].longitude);
 
-        var imageUrl = 'http://chart.apis.google.com/chart?cht=mm&chs=24x32&chco=' +
-            'FFFFFF,008CFF,000000&ext=.png';
+        var imageUrl = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
         var markerImage = new google.maps.MarkerImage(imageUrl,
             new google.maps.Size(24, 32));
 
