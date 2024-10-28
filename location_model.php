@@ -46,7 +46,9 @@ class Location_model extends \Model
         $out = array();
         $filter = get_machine_group_filter();
         $sql = "SELECT location.serial_number AS serial_number, latitude, longitude, long_username,
-					computer_name
+					computer_name,
+					machine_model,
+					machine_desc
 				FROM location
 				LEFT JOIN reportdata USING (serial_number)
 				LEFT JOIN machine USING (serial_number)
