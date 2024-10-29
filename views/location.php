@@ -73,8 +73,7 @@ mapObj.showMarkers = function() {
         var latLng = new google.maps.LatLng(mapObj.machines[i].latitude,
             mapObj.machines[i].longitude);
 
-        var imageUrl = 'http://chart.apis.google.com/chart?cht=mm&chs=24x32&chco=' +
-            'FFFFFF,008CFF,000000&ext=.png';
+        var imageUrl = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
         var markerImage = new google.maps.MarkerImage(imageUrl,
             new google.maps.Size(24, 32));
 
@@ -107,9 +106,12 @@ mapObj.markerClickFunction = function(machine, latlng) {
       e.stopPropagation();
       e.preventDefault();
     }
-	var configCode = machine.serial_number.substr(8);
+	    
+	var machineCode = machine.machine_desc.replace(/\(.*/,'');
+	var shortmachineCode = machineCode.replace(/\s+/g, '');
+	var configCode = shortmachineCode + '/' + machine.machine_model;
 	var iconUrlTemplate = "<?php echo conf('apple_hardware_icon_url');?>";
-	var iconUrl = iconUrlTemplate.replace('%s', configCode);
+	var iconUrl = 'https://statici.icloud.com/fmipmobile/deviceImages-9.0/' + configCode +'/online-infobox__2x.png'	
 
     var infoHtml = '<div class="info">' +
 	'<img style="width:120px; height: auto" src="'+iconUrl+'" />' +
